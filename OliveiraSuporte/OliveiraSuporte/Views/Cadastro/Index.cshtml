@@ -1,15 +1,16 @@
 ﻿@model OliveiraSuporte.Models.Cliente
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Cadastro";
 }
 <h2>
-    Cadastro</h2>
+    Cadastro</h2>    
 <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 @using (Html.BeginForm())
 {
+    //Erro que fica acima do formulario
     @Html.ValidationSummary()
-
+    //Inicio Formulário de cadastro.
     <fieldset>
         <legend>Cadastro</legend>
         <div>
@@ -71,4 +72,5 @@
 
         <input type="submit" value="Cadastrar"/>
     </fieldset>
+    //fimFormulario.
 }
