@@ -10,7 +10,7 @@ namespace OliveiraSuporte.Controllers
 {
     public class CadastroController : Controller
     {
-       private readonly DbComun _db = new DbComun(); 
+        private readonly DbComun _db = new DbComun();
 
         public ActionResult Index()
         {
@@ -19,14 +19,20 @@ namespace OliveiraSuporte.Controllers
         [HttpPost]
         public ActionResult Index(Cliente cliente, string confirmarSenha)
         {
-            if(confirmarSenha != cliente.Senha)
+            if (confirmarSenha != cliente.Senha)
             {
-                ModelState.AddModelError("ConfirmarSenha","As senhas não conferem");
+                ModelState.AddModelError("ConfirmarSenha", "As senhas não conferem");
                 return View(cliente);
             }
 
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
+                if(_db.Clientes.Any(x=>x.Login == cliente.Login))
+                {
+                    ModelState.AddModelError("Login", "Este usuário esta sendo usado");
+                    return View(cliente);
+                    
+                }
                 _db.Clientes.Add(cliente);
                 _db.SaveChanges();
                 return RedirectToAction("Parabens");

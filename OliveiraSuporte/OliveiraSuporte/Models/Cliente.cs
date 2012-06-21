@@ -11,7 +11,7 @@ namespace OliveiraSuporte.Models
         public int ClienteId { get; set; }
 
         [Required(ErrorMessage = "Este campo deve ser preenchido")]
-        [StringLength(50, MinimumLength = 2, ErrorMessage = "O campo deve conter entre 3 e 50 caracteres")]
+        [StringLength(50, MinimumLength = 2, ErrorMessage = "O campo deve conter entre 2 e 50 caracteres")]
         public string Nome { get; set; }
         
         [Display(Name = "Nome Da Empresa")]

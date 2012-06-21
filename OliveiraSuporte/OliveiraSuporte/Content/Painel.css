@@ -10,23 +10,11 @@ body {
     overflow: hidden;
 }
 
-header 
-{   margin: 0 auto;
+#cabecalho {
     max-width: 1000px;
     min-width: 270px;
     max-height: 300px;
     overflow: hidden;
-
-}
-
-#geral {
-    width: 1000px;
-    margin: 0 auto;
-}
-
-#corpo {
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 #logo {
@@ -35,7 +23,7 @@ header
     width: 186px;
     height: 135px;
     text-indent: -9999px;
-    background: url('../../Content/themes/base/images/logotopo.jpg') no-repeat;
+    background: url('images/logotopo.jpg') no-repeat;
 }
 #fundoTopo {
     width: 1000px;
@@ -62,7 +50,6 @@ header
 #menuTopo ul {
     height: 100px;
     overflow: hidden;
-    list-style: none;
 }
 
 #menuTopo ul li {
@@ -175,27 +162,25 @@ header
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
+    background-color: red;
 }
 
 
 #rodape {
     max-width: 1000px;
     margin: 0 auto;
-    clear: both;
-    overflow: hidden;
 }
 
 #menuRodape {
+    padding-top: 50px;
+    margin-left: -180px;
     float: left;
     height: 48px;
 }
 
 #menuRodape ul {
+    height: 100px;
     overflow: hidden;
-    list-style: none;
-    margin-left: -20px;
-    display: block;
-    border-top: 1px solid #5AB349;
 }
 
 #menuRodape ul li {
@@ -203,6 +188,7 @@ header
     float: left;
     padding-right: 15px;
     padding-top: 9px;
+    border-top: 1px solid #5AB349;
 }
 
 #menuRodape ul li a:link {
@@ -250,7 +236,7 @@ header
 /* Styles for basic forms
 -----------------------------------------------------------*/
 
-/*fieldset 
+fieldset 
 {
     border:1px solid #ddd;
     padding:0 1.4em 1.4em 1.4em;
@@ -276,7 +262,7 @@ textarea
 .editor-field 
 {
     margin:0.5em 0 0 0;
-}*/
+}
 
 
 /* Styles for validation helpers

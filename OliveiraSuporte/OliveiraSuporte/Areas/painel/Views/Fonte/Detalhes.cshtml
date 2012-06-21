@@ -1,0 +1,24 @@
+﻿@model OliveiraSuporte.Areas.painel.Models.Fonte
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Detalhes</h2>
+<fieldset>
+    <legend>Fonte</legend>
+    <div class="display-label">
+        Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+    <div class="display-label">
+        Contato</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Contato)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Editar", "Editar", new { id = Model.FonteId }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>
