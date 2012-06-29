@@ -102,8 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Painel.css" />
-    <Content Include="Content\themes\base\images\01.jpg" />
-    <Content Include="Content\themes\base\images\02.jpg" />
+    <Content Include="Content\themes\base\images\1.jpg" />
+    <Content Include="Content\themes\base\images\2.jpg" />
     <Content Include="Content\themes\base\images\barradivisao.jpg" />
     <Content Include="Content\themes\base\images\divisaoservicos.png" />
     <Content Include="Content\themes\base\images\evolucao.jpg" />
