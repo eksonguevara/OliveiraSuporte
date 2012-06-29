@@ -1,0 +1,53 @@
+﻿@model IEnumerable<OliveiraSuporte.Areas.painel.Models.Agenda>
+@{
+    ViewBag.Title = "Cadastro de Agenda";
+    Layout = "~/Areas/cliente/Views/Shared/_Layout.cshtml";
+}
+<div id="lista">
+<div id="tabelanoticia">
+    <h2>
+        Minhas Agendas</h2>
+    <table border="1" rules="all">
+        <tr>
+            <th>
+                Data
+            </th>
+            <th>
+                Descrição
+            </th>
+           <th>
+                Status
+            </th>
+            <th colspan="3">
+                Opções
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DateDaVisita)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.AgendaId }) |
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.AgendaId })
+                </td>
+            </tr>
+        }
+        <tr>
+            <th colspan="6">
+                <a href="@Url.Action("Cadastrar", "AgendarVisita")" class="voltar">Agendar nova Visita</a>
+            </th>
+        </tr>
+    </table>
+       <p>
+        <a href="@Url.Action("Index","Painel")">Painel</a>
+    </p>
+</div>
+</div>

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.UI.WebControls;
 using OliveiraSuporte.Util;
 
-namespace OliveiraSuporte.Areas.painel.Controllers
+namespace OliveiraSuporte.Areas.cliente.Controllers
 {
-    public class IndexController : Controller
+    public class LoginController : Controller
     {
         //
-        // GET: /painel/Index/
+        // GET: /cliente/Login/
         private readonly DbComun _db = new DbComun();
-        //Esta é uma ação do Index redirecionando para a view Index-Index.
+
         public ActionResult Index()
         {
             return View();
         }
-        //validação se usuario e senha estao preenchidos, e se estão corretos.
+        // Aqui e uma ação direcionada a view Index do controler Login, que vai fazer uma validação para que os campos não sejam vazios ou usuario e senha estejam errados.
+
         [HttpPost]
         public ActionResult Index(string login, string senha)
         {
@@ -27,17 +27,19 @@ namespace OliveiraSuporte.Areas.painel.Controllers
                 ModelState.AddModelError("login", "Os campos não podem estar vazios");
                 return View();
             }
-            var usuario = _db.Clientes.FirstOrDefault(x => x.Login == login && x.Senha == senha);
-            if (usuario == null)
+            var cliente = _db.Clientes.FirstOrDefault(x => x.Login == login && x.Senha == senha);
+            if (cliente == null)
             {
                 ModelState.AddModelError("login", "O usuário ou a senha não são validos");
                 return View();
             }
-
-            Session["logado"] = true;
-            Session["usuario"] = usuario.Nome;
+            //vai verificar se o cliente esta logado.
+            Session["logadocliente"] = true;
+            Session["cliente"] = cliente.Nome;
+            Session["ClienteId"] = cliente.ClienteId;
 
             return RedirectToAction("Index", "Painel");
         }
+
     }
 }

@@ -1,0 +1,38 @@
+﻿@model OliveiraSuporte.Areas.painel.Models.Agenda
+@{
+    ViewBag.Title = "Excluir";
+    Layout = "~/Areas/cliente/Views/Shared/_Layout.cshtml";
+}<div id="excluirvisita">
+<h2>
+    Excluir</h2>
+<h3>
+    Você tem certeza que gostaria de excluir?</h3>
+    <div class="display-label">
+        <p>Data da Visita</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateDaVisita)
+    </div>
+    <div class="display-label">
+        <p>Status</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+    <div class="display-label">
+        <p>Descrição</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+@using (Html.BeginForm())
+{
+    <p>
+        @if (Model.Status == "Nova")
+        {
+            <input type="submit" value="Excluir" /> 
+        }else
+        {
+            <p>Você só pode excluir agenda com status igual a Nova</p>
+        }
+        @Html.ActionLink("Voltar", "ListaDeVisitas")
+    </p>
+}
+</div>

@@ -1,0 +1,39 @@
+﻿@model IEnumerable<OliveiraSuporte.Areas.painel.Models.Agenda>
+@{
+    ViewBag.Title = "Agendamentos";
+    Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
+}
+<div id="tabelafonte">
+    <h2>
+        Agendamentos</h2>
+    <table border="1" rules="all">
+        <tr>
+            <th>
+                Data
+            </th>
+            <th>
+                Descricao
+            </th>
+            <th>
+            Status
+            </th>
+            <th>
+            Opções
+            </th>
+        </tr>
+            <tr>
+                <td>
+
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>    
+                <td>
+                    @Html.ActionLink("Editar", "Editar")
+                    @Html.ActionLink("Excluir", "Excluir")
+                </td>
+            </tr>
+    </table>
+    <a href="@Url.Action("Index", "Painel")" class="voltar">Voltar</a>
+</div>

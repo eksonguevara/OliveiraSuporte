@@ -3,40 +3,41 @@
     ViewBag.Title = "Cadastrar";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
-<h2>
-    Cadastrar</h2>
+
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
 <script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Noticia</legend>
+        <div id="cadastrarnoticias">
+        <h2>
+    Cadastrar Notícias</h2>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Titulo)
+            <p>@Html.LabelFor(model => model.Titulo)</p>
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.Titulo)
-            @Html.ValidationMessageFor(model => model.Titulo)
+            <p>@Html.EditorFor(model => model.Titulo)</p>
+            <p>@Html.ValidationMessageFor(model => model.Titulo)</p>
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Conteudo)
+            <p>@Html.LabelFor(model => model.Conteudo)</p>
         </div>
+        @*Verificar o tamanho do conteudo*@
         <div class="editor-field">
-            @Html.TextAreaFor(model => model.Conteudo)
-            @Html.ValidationMessageFor(model => model.Conteudo)
+            <p>@Html.TextAreaFor(model => model.Conteudo)</p>
+            <p>@Html.ValidationMessageFor(model => model.Conteudo)</p>
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Fonte.Nome)
+            <p>@Html.LabelFor(model => model.Fonte.Fontes)</p>
         </div>
         <div class="editor-field">
-            @Html.DropDownList("fonteId", (SelectList)ViewBag.ListaDeFontes)
+            <p>@Html.DropDownList("fonteId", (SelectList)ViewBag.ListaDeFontes)</p>
         </div>
         <p>
             <input type="submit" value="Cadastrar" />
         </p>
-    </fieldset>
+        </div>
 }
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index") 
 </div>

@@ -7,6 +7,7 @@ namespace OliveiraSuporte.Areas.painel.Models
 {
     public class Noticia
     {
+        //criando as propriedades.
         public int NoticiaId { get; set; }
 
         public string Titulo { get; set; }

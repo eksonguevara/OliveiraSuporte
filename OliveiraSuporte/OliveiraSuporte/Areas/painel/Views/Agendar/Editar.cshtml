@@ -1,6 +1,6 @@
-﻿@model OliveiraSuporte.Areas.painel.Models.Fonte
+﻿@model OliveiraSuporte.Areas.painel.Models.Agenda
 @{
-    ViewBag.Title = "Editar Fonte";
+    ViewBag.Title = "Editar";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
 
@@ -12,24 +12,24 @@
         <div id="editarfontes">
         <h2>
     Editar Fontes</h2>
-        @Html.HiddenFor(model => model.FonteId)
+        @Html.HiddenFor(model => model.AgendaId)
         <div>
-            <p>@Html.LabelFor(model => model.Nome)</p>
+            <p>@Html.LabelFor(model => model.DateDaVisita)</p>
         </div>
         <div>
-            <p>@Html.EditorFor(model => model.Nome)</p>
-            <p>@Html.ValidationMessageFor(model => model.Nome)</p>
+            <p>@Html.EditorFor(model => model.DateDaVisita)</p>
+            <p>@Html.ValidationMessageFor(model => model.DateDaVisita)</p>
         </div>
         <div>
-            <p>@Html.LabelFor(model => model.Fontes)</p>
+            <p>@Html.LabelFor(model => model.Descricao)</p>
         </div>
         <div>
-            <p>@Html.EditorFor(model => model.Fontes)</p>
-            <p>@Html.ValidationMessageFor(model => model.Fontes)</p>
+            <p>@Html.EditorFor(model => model.Descricao)</p>
+            <p>@Html.ValidationMessageFor(model => model.Descricao)</p>
         </div>
         <p>
             <input type="submit" value="Alterar" />
         </p>
-        <a href="@Url.Action("Index", "Fonte")" class="voltar">Voltar</a>
         </div>
 }
+<a href="@Url.Action("Index", "Agendar")" class="voltar">Voltar</a>

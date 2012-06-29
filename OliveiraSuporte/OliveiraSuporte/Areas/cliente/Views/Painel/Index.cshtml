@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
+}
+<div id="allcliente">
+<div id="painelcliente">
+    <h2>
+        @Session["cliente"].ToString() Agora você pode:</h2>
+</div>
+<div id="icones">
+    <ul>
+        <li><a href="@Url.Action("Cadastrar", "AgendarVisita", new { Area = "cliente" })">Agendar
+            Visita</a></li>
+        <li><a href="@Url.Action("ListaDeVisitas", "AgendarVisita", new { Area = "cliente" })">
+            Ver agenda de Visitas</a></li>
+        <li><a href="@Url.Action("Sair", "Painel", new { Area = "cliente" })">Sair</a></li>
+    </ul>
+</div>
+</div>

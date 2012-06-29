@@ -3,36 +3,50 @@
     ViewBag.Title = "Cadastro de Notícias";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
-<h2>
-    Index</h2>
-<p>
-    <a href="@Url.Action("Create", "Noticia")" class="voltar">Cadatrar nova Notícias</a>
-</p>
-<table>
-    <tr>
-        <th>
-            Titulo
-        </th>
-        <th>
-            Fonte
-        </th>
-        <th>
-        </th>
-    </tr>
-    @foreach (var item in Model)
-    {
+<div id="tudonoticia">
+<div id="tabelanoticia">
+    <h2>
+        Cadastro de Notícias</h2>
+    <table border="1" rules="all">
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Titulo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Fonte.Nome)
-            </td>
-            <td>
-                @Html.ActionLink("Editar", "Edit", new { id = item.NoticiaId }) |
-                @Html.ActionLink("Detalhes", "Details", new { id = item.NoticiaId }) |
-                @Html.ActionLink("Excluir", "Delete", new { id = item.NoticiaId })
-            </td>
+            <th>
+                Titulo
+            </th>
+            <th>
+                Conteúdo
+            </th>
+            <th>
+                Fonte
+            </th>
+            <th colspan="3">
+                Opções
+            </th>
         </tr>
-    }
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Titulo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Conteudo)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Fonte.Fontes)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Edit", new { id = item.NoticiaId })
+                    @Html.ActionLink("Detalhes", "Details", new { id = item.NoticiaId })
+                    @Html.ActionLink("Excluir", "Delete", new { id = item.NoticiaId })
+                </td>
+            </tr>
+        }
+        <tr>
+            <th colspan="6">
+                <a href="@Url.Action("Create", "Noticia")" class="voltar">Cadatrar nova Notícias</a>
+            </th>
+        </tr>
+    </table>
+    <a class="voltar" href="@Url.Action("Index", "Painel")" class="voltar">Voltar</a>
+</div>
+</div>

@@ -15,6 +15,7 @@ namespace OliveiraSuporte.Areas.painel.Controllers
 
             public ActionResult Index()
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
 
@@ -23,6 +24,7 @@ namespace OliveiraSuporte.Areas.painel.Controllers
 
             public ActionResult Details(int id)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
 
@@ -33,15 +35,16 @@ namespace OliveiraSuporte.Areas.painel.Controllers
             
             public ActionResult Create()
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
-
+                //criando a variavel lista de fontes, e buscando os campos FonteId e fontes para a lista de fontes.
                 var listaDeFontes = _db.Fontes.ToList();
 
                 //<select>
                 // <option value="1">Texto</option>
                 //</select>
-                ViewBag.ListaDeFontes = new SelectList(listaDeFontes, "FonteId", "Nome");
+                ViewBag.ListaDeFontes = new SelectList(listaDeFontes, "FonteId", "Fontes");
 
                 return View();
             }
@@ -49,9 +52,10 @@ namespace OliveiraSuporte.Areas.painel.Controllers
             [HttpPost]
             public ActionResult Create([Bind(Exclude = "Fonte")]Noticia noticia, int fonteId)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
-
+                //Validação para criar uma noticia e buscando uma fonte ja existente e salvando no banco
                 if (ModelState.IsValid)
                 {
                     noticia.Fonte = _db.Fontes.Find(fonteId);
@@ -65,13 +69,14 @@ namespace OliveiraSuporte.Areas.painel.Controllers
 
             public ActionResult Edit(int id)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
-
+                
                 Noticia noticia = _db.Noticias.Include(x => x.Fonte).FirstOrDefault(x => x.NoticiaId == id);
                 
                 var listaDeFontes = _db.Fontes.ToList();
-                ViewBag.ListaDeFontes = new SelectList(listaDeFontes, "FonteId", "Nome", noticia.Fonte.FonteId);
+                ViewBag.ListaDeFontes = new SelectList(listaDeFontes, "FonteId", "Fontes", noticia.Fonte.FonteId);
 
                 return View(noticia);
             }
@@ -79,6 +84,7 @@ namespace OliveiraSuporte.Areas.painel.Controllers
             [HttpPost]
             public ActionResult Edit([Bind(Exclude = "Fonte")]Noticia noticia, int fonteId)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
 
@@ -98,9 +104,10 @@ namespace OliveiraSuporte.Areas.painel.Controllers
 
             public ActionResult Delete(int id)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
-
+                //para deletar a noticia pelo id
                 Noticia noticia = _db.Noticias.Find(id);
                 return View(noticia);
             }
@@ -108,9 +115,10 @@ namespace OliveiraSuporte.Areas.painel.Controllers
             [HttpPost, ActionName("Delete")]
             public ActionResult DeleteConfirmed(int id)
             {
+                //validação para impedir o usuario logar diretamente pela URL
                 if (Session["logado"] == null)
                     return RedirectToAction("Index", "Index");
-
+                //confirmação da exclusão da noticia
                 Noticia noticia = _db.Noticias.Find(id);
                 _db.Noticias.Remove(noticia);
                 _db.SaveChanges();

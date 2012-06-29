@@ -3,6 +3,7 @@
     ViewBag.Title = "Editar";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
+<div id="noticiaeditar">
 <h2>
     Editar</h2>
 <script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
@@ -10,8 +11,7 @@
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary(true)
-    <fieldset>
-        <legend>Noticia</legend>
+        
         @Html.HiddenFor(model => model.NoticiaId)
         <div class="editor-label">
             @Html.LabelFor(model => model.Titulo)
@@ -28,7 +28,7 @@
             @Html.ValidationMessageFor(model => model.Conteudo)
         </div>
         <div class="editor-label">
-            @Html.LabelFor(model => model.Fonte.Nome)
+            @Html.LabelFor(model => model.Fonte.Fontes)
         </div>
         <div class="editor-field">
             @Html.DropDownList("fonteId", (SelectList)ViewBag.ListaDeFontes)
@@ -36,8 +36,8 @@
         <p>
             <input type="submit" value="Save" />
         </p>
-    </fieldset>
 }
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Voltar", "Index")
+</div>
 </div>

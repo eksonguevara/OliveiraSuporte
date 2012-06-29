@@ -22,7 +22,9 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("Serviços", "Index", "Servicos")</li>
                 <li>@Html.ActionLink("Cadastro", "Index", "Cadastro")</li>
-                <li>@Html.ActionLink("Agende Sua Visita", "Index", "AgendarVisita")</li>
+
+                <li><a href="@Url.Action("Index", "Painel", new { Area = "cliente" })">Agende Sua Visita</a></li>
+                
                 <li>@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
                 <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
             </ul>
@@ -36,7 +38,7 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("Serviços", "Index", "Servicos")</li>
                 <li>@Html.ActionLink("Cadastro", "Index", "Cadastro")</li>
-                <li>@Html.ActionLink("Agende Sua Visita", "Index", "AgendarVisita")</li>
+                <li><a href="@Url.Action("Index", "AgendarVisita", new { Area = "cliente" })">Agende Sua Visita</a></li>
                 <li>@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
                 <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
             </ul>
@@ -53,28 +55,6 @@
     </section>
     </section>
     </footer>
-    @* <div id="rodape">
-        <div id="menuRodape">
-            <ul>
-                <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                <li>@Html.ActionLink("Serviços", "Index", "Servicos")</li>
-                <li>@Html.ActionLink("Cadastro", "Index", "Cadastro")</li>
-                <li>@Html.ActionLink("Agende Sua Visita", "Index", "AgendarVisita")</li>
-                <li>@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
-                <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
-            </ul>
-        </div>
-        <div id="fundoRodape">
-            <p>
-                Copyright© www.oliveirasuporte.com.br</p>
-        </div>
-        <div id="logoWebsolutions">
-            <img src="../../Content/themes/base/images/logowebsolutions.jpg" />
-        </div>
-        <div id="logoRodape">
-            <img src="../../Content/themes/base/images/logorodape.jpg" />
-        </div>
-    </div>*@
 </section>
 </body>
 </html>

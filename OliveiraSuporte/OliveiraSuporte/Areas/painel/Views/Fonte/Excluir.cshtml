@@ -3,25 +3,23 @@
     ViewBag.Title = "Excluir Fonte";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
+<div id="excluirfonte">
 <h2>
     Excluir</h2>
 <h3>
     Deseja mesmo excluir?</h3>
-<fieldset>
-    <legend>Fonte</legend>
     <div>
-        @Html.LabelFor(model => model.Nome)
+        <p>@Html.LabelFor(model => model.Nome)</p>
     </div>
     <div>
         @Html.DisplayFor(model => model.Nome)
     </div>
     <div>
-        @Html.LabelFor(model => model.Contato)
+        <p>@Html.LabelFor(model => model.Fontes)</p>
     </div>
     <div>
-        @Html.DisplayFor(model => model.Contato)
+        @Html.DisplayFor(model => model.Fontes)
     </div>
-</fieldset>
 @using (Html.BeginForm())
 {
     <p>
@@ -29,3 +27,4 @@
         <a href="@Url.Action("Index", "Fonte")" class="voltar">Voltar</a>
     </p>
 }
+</div>

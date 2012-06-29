@@ -2,6 +2,17 @@
     ViewBag.Title = "Parabens";
 }
 
-<h2>Parabens</h2>
-Parabéns você foi cadastrado
-@Html.ActionLink("Home","Index","Home")
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../../Content/Site.css" type="text/css" media="screen">
+    </head>
+    <body id="teste">
+        <div id="parabens">
+            <h2>Cadastro Concluído com Sucesso!</h2>        
+            <p><a href="@Url.Action("Index", "Login", new { Area = "cliente" })">Clique aqui</a> e agende sua visita.</p>
+        </div>
+    </body>
+</html>

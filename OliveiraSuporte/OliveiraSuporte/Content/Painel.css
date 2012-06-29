@@ -1,295 +1,319 @@
-body {
-    margin-top: 0;  
-}
-
-#inteiro {
-    max-width: 1000px;
-    min-width: 270px;
-    margin: 0 auto;
-    min-height: 400px;
-    overflow: hidden;
-}
-
-#cabecalho {
-    max-width: 1000px;
-    min-width: 270px;
-    max-height: 300px;
-    overflow: hidden;
-}
-
-#logo {
-    margin-top: -100px;
-    margin-left: 70px;
-    width: 186px;
-    height: 135px;
-    text-indent: -9999px;
-    background: url('images/logotopo.jpg') no-repeat;
-}
-#fundoTopo {
+#topopainel {
     width: 1000px;
-    height: 95px;
-    background-color: #5AB349;
-    border-bottom: 5px solid #C1DD89;
-}
-
-#fundoTopo h1 {
-    float: right;
-    margin-right: 200px;
-    font-family: Verdana;
-    color: #FFF;
-    font-style: italic;
-}
-
-#menuTopo {
-    margin: -45px;
-    margin-right: 0;
-    float: right;
-    height: 100px;
-}
-
-#menuTopo ul {
-    height: 100px;
-    overflow: hidden;
-}
-
-#menuTopo ul li {
-    color: #000;
-    float: left;
-    padding-right: 15px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #5AB349;
-}
-
-#menuTopo ul li a:link {
-    text-decoration: none;
-    color: #393737;
-    font-family: Verdana;
-    font-size: 12px;
-    font-weight: bolder;
-}
-
-#menuTopo ul li a:hover {
-    color: #333;
-    padding-bottom: 7px;
-    border-bottom: 3px solid #5AB349;
-
-}
-
-#clienteLeft {
-    float: left;
-    width: 200px;
-}
-
-#clienteLeft img {
-    padding-top: 5px;
-}
-
-#clienteLeft img:first-child {
-    margin-top: 30px;
-    margin-left: 12px;
-    padding-bottom: 10px;
-}
-
-#conteudo {
-    width: 600px;
-    margin-top: 30px;
-    float: left;
-}
-
-#slideBaner {
-    width: 467px;
-    height: 245px;
-    margin-left: 68px;
-}
-
-#servicos {
-    width: 600px;
-    margin-left: 60px;
-}
-
-#servicos img {
-    float: left;
-    padding-left: 2px;
-    padding-bottom: 20px;
-    margin-right: 20px;
-
-}
-
-#servicos img:first-child {
-    padding-right: 300px;
-    margin-top: 30px;
-    margin-left: -30px;
-    margin-bottom: 10px;
-}
-
-
-#noticia {
-    width: 190px;
-    margin-top: 40px;
-    float: right;
-}
-
-#noticia img:first-child {
-    margin-left: 20px;
-}
-
-#noticia1 {
-    width: 200px;
-    height: 150px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    background-color: red;
-}
-
-#noticia2 {
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: red;
-}
-
-#noticia3 {
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: red;
-}
-
-#noticia4 {
-    width: 200px;
-    height: 150px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: red;
-}
-
-
-#rodape {
-    max-width: 1000px;
     margin: 0 auto;
 }
 
-#menuRodape {
-    padding-top: 50px;
-    margin-left: -180px;
-    float: left;
-    height: 48px;
+#topopainel p {
+    margin-left: 20px;
+    color: #5AB349;
+    font-size: 18px;
 }
 
-#menuRodape ul {
-    height: 100px;
-    overflow: hidden;
-}
-
-#menuRodape ul li {
-    color: #000;
-    float: left;
-    padding-right: 15px;
-    padding-top: 9px;
-    border-top: 1px solid #5AB349;
-}
-
-#menuRodape ul li a:link {
-    text-decoration: none;
-    color: #393737;
-    font-family: Verdana;
-    font-size: 12px;
-    font-weight: bolder;
-}
-
-#menuRodape ul li a:hover {
-    color: #333;
-    padding-top: 7px;
-    border-top: 3px solid #5AB349;
-
-}
-
-#fundoRodape {
+#painel {
+    margin: 0 auto;
     width: 1000px;
-    height: 95px;
-    margin: 0 auto;
-    background-color: #5AB349;
-    clear: both;
-    border-top: 5px solid #C1DD89;   
+    height: 450px;
 }
 
-#fundoRodape p {
-  text-align: center;
-  margin-top: 40px;
-  color: #FFF;
+#conteudopainel {
+    padding-bottom: 30px;
+    padding-top: 200px;
+    margin-left: 300px;
 }
 
-#logoWebsolutions {
+#conteudopainel ul {
+    list-style: none;
+}
+
+#conteudopainel ul li {
     float: left;
-    margin-left: 20px;
-    margin-top: -60px;
 }
 
-#logoRodape {
-    float: right;
-    margin-right: 50px;
-    margin-top: -128px;
+#conteudopainel ul li a {
+    text-decoration: none;
+    padding-left: 20px;
+    color: #808080;
 }
 
-/* Styles for basic forms
------------------------------------------------------------*/
-
-fieldset 
-{
-    border:1px solid #ddd;
-    padding:0 1.4em 1.4em 1.4em;
-    margin:0 0 1.5em 0;
+#conteudopainel ul li a:hover {
+    color: #5AB349;
 }
 
-legend 
-{
-    font-size:1.2em;
+#tudonoticia {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#noticiaeditar {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+#noticiaeditar h2 {
+    color: #5AB349;
+}
+
+#noticiadetalhes h2 {
+    color: #5AB349;
+}
+#noticiadetalhes p {
     font-weight: bold;
 }
 
-textarea 
-{
-    min-height: 75px;
+#excluirnoticia {
+    margin: 0 auto;
+    width: 1000px;
+}
+#excluirnoticia h2 {
+    color: #5AB349;
+}
+#noticiadetalhes {
+    width: 1000px;
+    margin: 0 auto;
 }
 
-.editor-label 
-{
-    margin: 1em 0 0 0;
+#cadastrarnoticias {
+    margin: 150px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+    
 }
 
-.editor-field 
-{
-    margin:0.5em 0 0 0;
+#cadastrarnoticias h2 {
+    color: #5AB349;
+    font-size: 18px;
 }
 
-
-/* Styles for validation helpers
------------------------------------------------------------*/
-.field-validation-error
-{
-    color: #ff0000;
-}
-
-.field-validation-valid
-{
-    display: none;
-}
-
-.input-validation-error
-{
-    border: 1px solid #ff0000;
-    background-color: #ffeeee;
-}
-
-.validation-summary-errors
-{
+#excluirnoticia p {
     font-weight: bold;
-    color: #ff0000;
+}
+#cadastrarnoticias p {
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+    
 }
 
-.validation-summary-valid
+#editarnoticias {
+    margin: 150px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+
+}
+
+#editarnoticias h2 {
+    color: #5AB349;
+    font-size: 18px;
+}
+
+#editarnoticias p {
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+#cadastrarfontes {
+    margin: 150px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+
+}
+
+#cadastrarfontes h2 {
+    color: #5AB349;
+    font-size: 18px;
+}
+
+
+#cadastrarfontes p {
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+#editarfontes {
+    margin: 150px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+
+}
+
+#editarfontes h2 {
+    color: #5AB349;
+    font-size: 18px;
+}
+
+#editarfontes form {
+    font-weight: bold;
+}
+
+#editarfontes p {
+    font-size: 12px;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+
+}
+
+#rodapepainel 
 {
-    display: none;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+table a {
+    text-decoration: none;
+    color:#333;
+    padding: 2px;
+}
+
+table a:hover {
+    color: green;
+}
+
+table th {
+    padding: 2px;
+    color: #333;
+}
+#tabelafonte {
+    margin: 50px auto;
+    margin-left: 500px; 
+    width: 1000px;
+    height: 400px;
+}
+
+#excluirfonte h2 {
+    color: #5AB349;
+}
+
+#excluirfonte p {
+    font-weight: bold;
+}
+
+#excluirfonte {
+   margin: 100px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+}
+
+#fontedetalhes {
+    margin: 150px auto;
+    text-align: center;
+    width: 200px;
+    font-family: Verdana;
+}
+
+#fontedetalhes h2 {
+    color: #5AB349;
+}
+#fontedetalhes p {
+    font-weight: bold;
+}
+
+#tabelafonte h2 {
+    color: green;
+}
+
+#tabelanoticia h2 {
+    color: green;
+}
+
+#tudocliente {
+    margin: 0 auto;
+    width: 1000px;
+    height: 280px;
+}
+
+#logincliente {
+    margin-left: 400px;
+    margin-top: 200px;
+}
+
+#tudoadmin {
+    margin: 0 auto;
+    width: 1000px;
+    height: 280px;
+}
+
+#loginadmin {
+    margin-left: 400px;
+    margin-top: 200px;
+}
+#painelcliente {
+    width: 1000px;
+    margin: 70px auto;
+    margin-left: 550px;
+}
+#painelcliente h2 {
+    color: #5AB439;
+}
+
+#icones {
+    margin: 0 auto;
+    margin-left: 480px;
+}
+#icones ul li {
+    float: left;
+    padding-left: 15px;
+    list-style: none;
+}
+
+#icones ul li a {
+    text-decoration: none;
+    font-family: verdana;
+    color: #333;
+    font-size: 12px;
+}
+
+#icones ul li a:hover {
+    color: #5AB349;
+}
+
+#allcliente {
+    height: 380px;
+}
+
+#lista {
+    margin: 0 auto;
+    width: 1000px;
+    height: 380px;
+    margin-left: 450px;
+    margin-top: 70px;
+}
+
+#detalhesagendamento {
+    margin: 0 auto;
+    width: 1000px;
+    height: 450px;  
+}
+
+#detalhesagendamento h2 {
+    color: #5AB439;
+}
+
+#detalhesagendamento p {
+    font-weight: bold;
+}
+
+#excluirvisita {
+    margin: 0 auto;
+    width: 1000px;
+}
+
+#excluirvisita h2 {
+    color: #5AB439;
+}
+
+#excluirvisita p {
+    font-weight: bold;
 }

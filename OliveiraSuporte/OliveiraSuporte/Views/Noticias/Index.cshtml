@@ -1,0 +1,16 @@
+﻿@using OliveiraSuporte.Areas.painel.Models
+@model OliveiraSuporte.Areas.painel.Models.Noticia
+@{
+    ViewBag.Title = Model.Titulo;
+}
+<h2>@Model.Titulo</h2>
+<em>@Model.Fonte</em>
+<div id="conteudo">@Model.Conteudo</div> 
+<div id="noticia">
+    <img src="../../Content/themes/base/images/titulo_noticias.jpg" />
+    @foreach (Noticia noticia in ViewBag.noticias)
+    {
+        <a href="@Url.Action("Index", "Noticias", new { Id = noticia.NoticiaId })" id="noticia1">@noticia.Titulo</a>
+        <img src="../../Content/themes/base/images/barradivisao.jpg" />
+    }
+</div>

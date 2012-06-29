@@ -2,5 +2,23 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Bem vindo ao painel administrativo</h2>
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="../../../../Content/Painel.css" type="text/css" media="screen">
+</head>
+<body>
+        <div id="painel">
+            <div id="conteudopainel">
+                <ul>
+                    <li><a href="@Url.Action("Index", "Noticia", new { area = "painel" })" title="">Notícia</a></li>
+                    <li><a href="@Url.Action("Index", "Fonte", new { area = "painel" })" title="">Fonte</a></li>
+                    <li><a href="@Url.Action("Index", "Agendar", new { area = "painel" })" title="">Agendamentos</a></li>
+                    <li><a href="@Url.Action("Sair", "Painel", new { Area = "painel" })">Sair</a></li>
+                </ul>
+            </div>
+        </div>
+</body>
+</html>

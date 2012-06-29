@@ -3,22 +3,21 @@
     ViewBag.Title = "Detalhes";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
+<div id="fontedetalhes">
 <h2>
     Detalhes</h2>
-<fieldset>
-    <legend>Fonte</legend>
     <div class="display-label">
-        Nome</div>
+        <p>Nome</p></div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Nome)
     </div>
     <div class="display-label">
-        Contato</div>
+        <p>Fonte</p></div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Contato)
+        @Html.DisplayFor(model => model.Fontes)
     </div>
-</fieldset>
 <p>
     @Html.ActionLink("Editar", "Editar", new { id = Model.FonteId }) |
     @Html.ActionLink("Voltar", "Index")
 </p>
+</div>

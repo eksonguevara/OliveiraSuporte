@@ -4,26 +4,23 @@
     ViewBag.Title = "Excluir";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
-
+<div id="excluirnoticia">
 <h2>Excluir</h2>
 
 <h3>Você tem certeza que gostaria de excluir?</h3>
-<fieldset>
-    <legend>Noticia</legend>
-
-    <div class="display-label">Titulo</div>
+    <div class="display-label"><p>Titulo</p></div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Titulo)
     </div>
 
-    <div class="display-label">Conteudo</div>
+    <div class="display-label"><p>Conteudo</p></div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Conteudo)
     </div>
-</fieldset>
 @using (Html.BeginForm()) {
     <p>
-        <input type="submit" value="Delete" /> |
-        @Html.ActionLink("Back to List", "Index")
+        <input type="submit" value="Deletar" /> |
+        @Html.ActionLink("Voltar", "Index")
     </p>
 }
+</div>

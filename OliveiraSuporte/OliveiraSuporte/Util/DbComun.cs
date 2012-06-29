@@ -16,6 +16,7 @@ namespace OliveiraSuporte.Util
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Noticia> Noticias { get; set; }
         public DbSet<Fonte> Fontes { get; set; }
+        public DbSet<Agenda> Agendas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -1,19 +1,21 @@
 ﻿@{
+    ViewBag.Title = "Login";
     Layout = "~/Areas/cliente/Views/Shared/_Layout.cshtml";
 }
+@*Parte onde o usuario irá fazer o login*@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="../../../../Content/Painel.css" type="text/css" media="screen">
-    <title>Painel Administrativo</title>
+<link rel="stylesheet" href="../../../../Content/Painel.css" type="text/css" media="screen">
+    <title>Login</title>
 </head>
 <body>
-    <div id="tudoadmin">
-    <div id="loginadmin">
+    <div id="tudocliente">
+    <div id="logincliente">
         @using (Html.BeginForm())
         {
             @Html.ValidationSummary()
-            
+           
                 <div>
                     Login
                 </div>
@@ -26,9 +28,9 @@
                 <div>
                     @Html.Password("senha")
                 </div>
-                <p>
+                <div>
                     <input type="submit" value="Conectar" />
-                </p>
+                </div>
             
         }
     </div>

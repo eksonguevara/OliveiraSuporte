@@ -3,28 +3,38 @@
     ViewBag.Title = "Cadastro de Fontes";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
-<h2>Cadastro de Fontes</h2>
-
-<p>
-    <a href="@Url.Action("Cadastrar","Fonte")">Cadastrar Fonte</a>
-</p>
-
-<table>
-    <tr>
-        <th>Nome</th>
-        <th>Contato</th>
-        <th></th>
-    </tr>
-    @foreach (var item in Model)
-    {
+<div id="tabelafonte">
+    <h2>
+        Cadastro de Fontes</h2>
+    <table border="1" rules="all">
         <tr>
-            <td>@item.Nome</td>
-            <td>@item.Contato</td>
-            <td>
-                @Html.ActionLink("Editar", "Editar", new { id = item.FonteId })
-                @Html.ActionLink("Excluir", "Excluir", new { id = item.FonteId })
-                @Html.ActionLink("Detalhes", "Detalhes", new { id = item.FonteId })
-            </td>
+            <th>
+                Nome
+            </th>
+            <th>
+                Fonte
+            </th>
+            <th>
+            Opções
+            </th>
         </tr>
-    }
-</table>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nome
+                </td>
+                <td>@item.Fontes
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "Editar", new { id = item.FonteId })
+                    @Html.ActionLink("Excluir", "Excluir", new { id = item.FonteId })
+                    @Html.ActionLink("Detalhes", "Detalhes", new { id = item.FonteId })
+                </td>
+            </tr>
+        }
+        <tr>
+                <th colspan="5"><a href="@Url.Action("Cadastrar", "Fonte")">Cadastrar Fonte</a></th>
+            </tr>
+    </table>
+    <a href="@Url.Action("Index", "Painel")" class="voltar">Voltar</a>
+</div>

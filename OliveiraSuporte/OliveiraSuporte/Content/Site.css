@@ -49,6 +49,7 @@ header
     margin-right: 200px;
     font-family: Verdana;
     color: #FFF;
+    font-size: 30px;
     font-style: italic;
 }
 
@@ -69,7 +70,7 @@ header
     color: #000;
     float: left;
     padding-right: 15px;
-    padding-bottom: 8px;
+    padding-bottom: 5px;
     border-bottom: 1px solid #5AB349;
 }
 
@@ -81,11 +82,18 @@ header
     font-weight: bolder;
 }
 
+#menuTopo ul li a:visited {
+    text-decoration: none;
+    color: #393737;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
 #menuTopo ul li a:hover {
-    color: #333;
+    color: #5AB349;
     padding-bottom: 7px;
     border-bottom: 3px solid #5AB349;
-
 }
 
 #clienteLeft {
@@ -109,6 +117,8 @@ header
     float: left;
 }
 
+
+
 #slideBaner {
     width: 467px;
     height: 245px;
@@ -116,11 +126,12 @@ header
 }
 
 #servicos {
-    width: 600px;
+    width: 540px;
     margin-left: 60px;
+    overflow: auto;
 }
 
-#servicos img {
+#servicos a img {
     float: left;
     padding-left: 2px;
     padding-bottom: 20px;
@@ -128,13 +139,12 @@ header
 
 }
 
-#servicos img:first-child {
+#imagemservicos {
     padding-right: 300px;
     margin-top: 30px;
-    margin-left: -30px;
+    margin-left: 30px;
     margin-bottom: 10px;
 }
-
 
 #noticia {
     width: 190px;
@@ -144,6 +154,7 @@ header
 
 #noticia img:first-child {
     margin-left: 20px;
+    padding-right: 20px;
 }
 
 #noticia1 {
@@ -151,7 +162,8 @@ header
     height: 150px;
     margin-top: 20px;
     margin-bottom: 10px;
-    background-color: red;
+    text-decoration: none;
+    color: #333;
 }
 
 #noticia2 {
@@ -159,7 +171,6 @@ header
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: red;
 }
 
 #noticia3 {
@@ -167,7 +178,6 @@ header
     height: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: red;
 }
 
 #noticia4 {
@@ -202,7 +212,7 @@ header
     color: #000;
     float: left;
     padding-right: 15px;
-    padding-top: 9px;
+    padding-top: 6px;
 }
 
 #menuRodape ul li a:link {
@@ -213,8 +223,16 @@ header
     font-weight: bolder;
 }
 
+#menuRodape ul li a:visited {
+    text-decoration: none;
+    color: #393737;
+    font-family: Verdana;
+    font-size: 12px;
+    font-weight: bolder;
+}
+
 #menuRodape ul li a:hover {
-    color: #333;
+    color: #5AB349;
     padding-top: 7px;
     border-top: 3px solid #5AB349;
 
@@ -231,6 +249,9 @@ header
 
 #fundoRodape p {
   text-align: center;
+  font-family: Verdana;
+  font-size: 12px;
+  font-weight: bold;
   margin-top: 40px;
   color: #FFF;
 }
@@ -247,10 +268,37 @@ header
     margin-top: -128px;
 }
 
-/* Styles for basic forms
------------------------------------------------------------*/
+#teste {
+    margin: 0 auto;
+}
 
-/*fieldset 
+#parabens {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#parabens h2 {
+    color: #5AB349;
+}
+
+#parabens p {
+    padding-top: 250px;
+    font-weight: bold;
+}
+
+#parabens p a {
+    text-decoration: none;
+}
+
+#parabens p a:hover {
+    color:#5AB349;
+}
+
+
+
+fieldset 
 {
     border:1px solid #ddd;
     padding:0 1.4em 1.4em 1.4em;
@@ -276,11 +324,7 @@ textarea
 .editor-field 
 {
     margin:0.5em 0 0 0;
-}*/
-
-
-/* Styles for validation helpers
------------------------------------------------------------*/
+}
 .field-validation-error
 {
     color: #ff0000;
@@ -306,4 +350,62 @@ textarea
 .validation-summary-valid
 {
     display: none;
+}
+
+#h2cadastroclientes {
+    color: #5AB349;
+    text-align: center;
+}
+
+#cadastroclientes {
+    color: #333;
+    margin-left: 430px;
+}
+#quemsomos {
+    width: 600px;
+    text-align: left;
+}
+
+#quemsomos h2 {
+    color: #5AB349;
+}
+
+#quemsomos p {
+    font-size: 14px;
+    color: #333;
+    font-weight:bold;
+}
+
+#contato {
+    width: 600px;
+    text-align: left;
+}
+
+#contato h2 {
+    color: #5AB349;
+}
+
+#contato p {
+    font-size: 14px;
+    color: #333;
+    font-weight:bold;
+}
+
+#servicoss {
+    width: 600px;
+    text-align: left;
+}
+
+#servicoss h2 {
+    color: #5AB349;
+}
+
+#servicoss p {
+    font-size: 14px;
+    color: #333;
+    font-weight:bold;
+}
+
+#servicoss img {
+    margin-left: 50px;
 }

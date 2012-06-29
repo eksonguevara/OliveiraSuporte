@@ -2,7 +2,7 @@
 
 namespace OliveiraSuporte.Areas.cliente
 {
-    public class clienteAreaRegistration : AreaRegistration
+    public class ClienteAreaRegistration : AreaRegistration
     {
         public override string AreaName
         {

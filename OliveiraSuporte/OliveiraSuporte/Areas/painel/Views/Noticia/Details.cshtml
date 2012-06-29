@@ -3,27 +3,26 @@
     ViewBag.Title = "Detalhes";
     Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
 }
+<div id="noticiadetalhes">
 <h2>
     Detalhes</h2>
-<fieldset>
-    <legend>Noticia</legend>
     <div class="display-label">
-        Titulo</div>
+        <p>Titulo</p></div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Titulo)
     </div>
     <div class="display-label">
-        Conteudo</div>
+        <p>Conteudo</p></div>
     <div class="display-field">
         @Html.DisplayFor(model => model.Conteudo)
     </div>
     <div class="display-label">
-        Fonte</div>
+        <p>Fonte / Nome</p></div>
     <div class="display-field">
-        @Html.DisplayFor(model => model.Fonte.Nome) / @Html.DisplayFor(model => model.Fonte.Contato)
+        @Html.DisplayFor(model => model.Fonte.Fontes) / @Html.DisplayFor(model => model.Fonte.Nome)
     </div>
-</fieldset>
 <p>
     @Html.ActionLink("Editar", "Edit", new { id = Model.NoticiaId }) |
     @Html.ActionLink("Voltar", "Index")
 </p>
+</div>

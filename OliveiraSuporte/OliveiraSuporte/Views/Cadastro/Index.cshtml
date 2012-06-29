@@ -2,17 +2,17 @@
 @{
     ViewBag.Title = "Cadastro";
 }
-<h2>
-    Cadastro</h2>    
+<div id="h2cadastroclientes"><h2>
+    Cadastro</h2></div>  
 <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.min.js")"></script>
 <script type="text/javascript" src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")"></script>
 @using (Html.BeginForm())
 {
-    //Erro que fica acima do formulario
-    @Html.ValidationSummary()
+    
+    
     //Inicio Formulário de cadastro.
-    <fieldset>
-        <legend>Cadastro</legend>
+    <div id="cadastroclientes">
+        <p>* Campos obrigatórios</p>
         <div>
             @Html.LabelFor(x => x.Nome)
         </div>
@@ -66,11 +66,11 @@
             <label for="confirmarSenha">Confirmar Senha</label>
         </div>
         <div>
-            <input class="text-box single-line" data-val="true" data-val-length="O confirmar senha deve conter no mínimo 7 e máximo 20 caracteres" data-val-length-max="20" data-val-length-min="7" data-val-required="Este campo deve ser preenchido" id="confirmarSenha" name="confirmarSenha" type="password" value="" />
+            <input class="text-box single-line" data-val="true" data-val-length="O confirmar senha deve conter no mínimo 7 e máximo 20 caracteres" data-val-length-max="20" data-val-length-min="7" data-val-required="Este campo deve ser preenchido"  id="confirmarSenha" name="confirmarSenha" type="password" value="" />
             <span class="field-validation-valid" data-valmsg-for="confirmarSenha" data-valmsg-replace="true"></span>
         </div>
 
         <input type="submit" value="Cadastrar"/>
-    </fieldset>
+        </div>
     //fimFormulario.
 }

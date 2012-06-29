@@ -1,0 +1,27 @@
+﻿@model OliveiraSuporte.Areas.painel.Models.Agenda
+@{
+    ViewBag.Title = "Detalhes";
+    Layout = "~/Areas/cliente/Views/Shared/_Layout.cshtml";
+}
+<div id="detalhesagendamento">
+    <h2>
+        Detalhes do Agendamento</h2>
+    <div class="display-label">
+        <p>Data da Visita</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DateDaVisita)
+    </div>
+    <div class="display-label">
+        <p>Status</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Status)
+    </div>
+    <div class="display-label">
+        <p>Descrição</p></div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+    <p>
+        @Html.ActionLink("Voltar", "ListaDeVisitas")
+    </p>
+</div>

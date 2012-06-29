@@ -1,0 +1,31 @@
+﻿@model OliveiraSuporte.Areas.painel.Models.Agenda
+@{
+    ViewBag.Title = "Excluir";
+    Layout = "~/Areas/painel/Views/Shared/_Layout.cshtml";
+}
+<h2>
+    Excluir</h2>
+<h3>
+    Deseja mesmo excluir?</h3>
+<fieldset>
+    <legend>Fonte</legend>
+    <div>
+        @Html.LabelFor(model => model.DateDaVisita)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.DateDaVisita)
+    </div>
+    <div>
+        @Html.LabelFor(model => model.Descricao)
+    </div>
+    <div>
+        @Html.DisplayFor(model => model.Descricao)
+    </div>
+</fieldset>
+@using (Html.BeginForm())
+{
+    <p>
+        <input type="submit" value="Excluir" />
+        <a href="@Url.Action("Index", "Agendar")" class="voltar">Voltar</a>
+    </p>
+}
