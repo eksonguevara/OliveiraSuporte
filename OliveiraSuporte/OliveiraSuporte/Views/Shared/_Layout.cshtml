@@ -22,9 +22,7 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("Serviços", "Index", "Servicos")</li>
                 <li>@Html.ActionLink("Cadastro", "Index", "Cadastro")</li>
-
-                <li><a href="@Url.Action("Index", "Painel", new { Area = "cliente" })">Agende Sua Visita</a></li>
-                
+                <li><a href="@Url.Action("Index", "Login", new { Area = "cliente" })">Agende Sua Visita</a></li>
                 <li>@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
                 <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
             </ul>
@@ -38,7 +36,7 @@
                 <li>@Html.ActionLink("Home", "Index", "Home")</li>
                 <li>@Html.ActionLink("Serviços", "Index", "Servicos")</li>
                 <li>@Html.ActionLink("Cadastro", "Index", "Cadastro")</li>
-                <li><a href="@Url.Action("Index", "AgendarVisita", new { Area = "cliente" })">Agende Sua Visita</a></li>
+                <li><a href="@Url.Action("Index", "Login", new { Area = "cliente" })">Agende Sua Visita</a></li>
                 <li>@Html.ActionLink("Quem Somos", "Index", "QuemSomos")</li>
                 <li>@Html.ActionLink("Contato", "Index", "Contato")</li>
             </ul>
